@@ -1,0 +1,120 @@
+
+export const Cities = [
+  '上海',
+  '杭州',
+  '广州',
+  '福州',
+  '拉萨',
+  '乌鲁木齐',
+  '包头',
+  '宝鸡',
+  '黑龙江',
+  '大连',
+  '青岛',
+];
+
+export const JobInfos = [
+  {
+    id: 1,
+    city: '上海',
+    position: '开发',
+    salary: 20000,
+    skill: 'c',
+  }, {
+    id: 2,
+    city: '杭州',
+    position: '开发',
+    salary: 20000,
+    skill: 'c',
+  }, {
+    id: 3,
+    city: '上海',
+    position: '开发',
+    salary: 20000,
+    skill: 'c',
+  }, {
+    id: 4,
+    city: '杭州',
+    position: '开发',
+    salary: 20000,
+    skill: 'c',
+  }, {
+    id: 5,
+    city: '杭州',
+    position: '开发',
+    salary: 20000,
+    skill: 'c',
+  }, {
+    id: 6,
+    city: '杭州',
+    position: '开发',
+    salary: 20000,
+    skill: 'c',
+  }, {
+    id: 7,
+    city: '广州',
+    position: '开发',
+    salary: 20000,
+    skill: 'c',
+  }, {
+    id: 8,
+    city: '福州',
+    position: '开发',
+    salary: 20000,
+    skill: 'c',
+  }, {
+    id: 9,
+    city: '拉萨',
+    position: '开发',
+    salary: 20000,
+    skill: 'c',
+  }, {
+    id: 10,
+    city: '乌鲁木齐',
+    position: '开发',
+    salary: 20000,
+    skill: 'c',
+  }, {
+    id: 11,
+    city: '包头',
+    position: '开发',
+    salary: 20000,
+    skill: 'c',
+  }, {
+    id: 12,
+    city: '宝鸡',
+    position: '开发',
+    salary: 20000,
+    skill: 'c',
+  }, {
+    id: 13,
+    city: '黑龙江',
+    position: '开发',
+    salary: 20000,
+    skill: 'c',
+  }, {
+    id: 14,
+    city: '大连',
+    position: '开发',
+    salary: 20000,
+    skill: 'c',
+  }, {
+    id: 15,
+    city: '广州',
+    position: '开发',
+    salary: 20000,
+    skill: 'c',
+  }, {
+    id: 16,
+    city: '广州',
+    position: '开发',
+    salary: 20000,
+    skill: 'c',
+  }, {
+    id: 17,
+    city: '广州',
+    position: '开发',
+    salary: 20000,
+    skill: 'c',
+  },
+];
