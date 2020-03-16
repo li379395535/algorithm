@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Prerequisite
-+ install node
++ install [node](https://nodejs.org/zh-cn/)
 + install [yarn](https://classic.yarnpkg.com/zh-Hans/docs/install#windows-stable)
 
 ## Available Scripts
