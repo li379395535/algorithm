@@ -1,4 +1,9 @@
-class LinkNode<T> {
+export interface ILinkNode<T> {
+  Value: T,
+  Next?: ILinkNode<T>,
+}
+
+class LinkNode<T> implements ILinkNode<T> {
   public Value: T;
 
   public Next?: LinkNode<T>;

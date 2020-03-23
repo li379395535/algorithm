@@ -94,7 +94,7 @@ class LRUCache<T> {
 
   private dropEnd() {
     if (this.length >= 2) {
-      const lastSecond = this.findByIndex(this.length - 2);
+      const lastSecond = this.findByIndex(this.length - 1);
       if (lastSecond) {
         lastSecond.Next = undefined;
         this.length -= 1;

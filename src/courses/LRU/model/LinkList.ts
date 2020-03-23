@@ -1,6 +1,14 @@
 import LinkNode from './LinkNode';
 
-class LinkList<T> {
+export interface ILinkList<T> {
+  readonly Length: number,
+  readonly List: LinkNode<T>,
+  findMiddleNode(): LinkNode<T>,
+  findPrevNode(target: LinkNode<T>): LinkNode<T> | undefined,
+  findLastNode(target: LinkNode<T>): LinkNode<T>,
+}
+
+class LinkList<T> implements ILinkList<T> {
   private length: number;
 
   private list: LinkNode<T>;
@@ -20,6 +28,10 @@ class LinkList<T> {
     return this.length;
   }
 
+  public get List() {
+    return this.list;
+  }
+
   private push(value: T) {
     const valueNode = new LinkNode<T>(value);
     const lastNode = this.findLastNode();
@@ -27,7 +39,7 @@ class LinkList<T> {
     this.length += 1;
   }
 
-  private findLastNode() {
+  public findLastNode() {
     let currentNode = this.list;
     while (currentNode) {
       if (currentNode.Next) {
@@ -42,13 +54,14 @@ class LinkList<T> {
   public findMiddleNode() {
     const middleIndex = Math.floor((this.length - 1) / 2);
     let currentNode = this.list;
-    const index = 0;
+    let index = 0;
     while (currentNode) {
       if (index <= middleIndex && currentNode.Next) {
         currentNode = currentNode.Next;
       } else {
         break;
       }
+      index += 1;
     }
 
     return currentNode;

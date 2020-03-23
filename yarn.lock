@@ -1426,6 +1426,10 @@
   version "1.1.1"
   resolved "https://registry.npm.taobao.org/@types/color-name/download/@types/color-name-1.1.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fcolor-name%2Fdownload%2F%40types%2Fcolor-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
 
+"@types/debounce@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.npm.taobao.org/@types/debounce/download/@types/debounce-1.2.0.tgz#9ee99259f41018c640b3929e1bb32c3dcecdb192"
+
 "@types/eslint-visitor-keys@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@types/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#1ee30d79544ca84d68d4b3cdb0af4f205663dd2d"
@@ -3455,6 +3459,10 @@ data-urls@^1.0.0, data-urls@^1.1.0:
 date-fns@^1.27.2:
   version "1.30.1"
   resolved "https://registry.npm.taobao.org/date-fns/download/date-fns-1.30.1.tgz#2e71bf0b119153dbb4cc4e88d9ea5acfb50dc05c"
+
+debounce@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.npm.taobao.org/debounce/download/debounce-1.2.0.tgz#44a540abc0ea9943018dc0eaa95cce87f65cd131"
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.8, debug@^2.6.9:
   version "2.6.9"

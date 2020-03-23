@@ -112,7 +112,7 @@ export const JobInfos = [
     skill: 'c',
   }, {
     id: 17,
-    city: '广州',
+    city: '青岛',
     position: '开发',
     salary: 20000,
     skill: 'c',

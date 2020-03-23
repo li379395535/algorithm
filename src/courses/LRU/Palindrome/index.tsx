@@ -1,7 +1,9 @@
-import React, { FunctionComponent, useState, ChangeEvent } from 'react';
+import React, {
+  FunctionComponent, useState, ChangeEvent, useEffect,
+} from 'react';
 import { Input } from 'antd';
 import LinkList from '../model/LinkList';
-import LinkNode from '../model/LinkNode';
+import { ILinkNode } from '../model/LinkNode';
 
 function initLinkList(value: string = '') : LinkList<string> {
   const chars = value.split('');
@@ -14,45 +16,52 @@ function isPalindrome(values: LinkList<string>): boolean {
   }
   const middleNode = values.findMiddleNode();
   const even = values.Length % 2 === 0;
-  let palindromeNode: LinkNode<string> | undefined;
+  let palindromeNode: ILinkNode<string> | undefined;
   if (even) {
     palindromeNode = middleNode.Next;
   } else {
     palindromeNode = middleNode;
   }
 
-  let targetNode: LinkNode<string> | undefined = middleNode;
-  let isPalindrome = true;
+  let targetNode: ILinkNode<string> | undefined = middleNode;
+  let isPalindromeString = true;
   while (targetNode && palindromeNode) {
     if (targetNode.Value !== palindromeNode.Value) {
-      isPalindrome = false;
+      isPalindromeString = false;
       break;
     } else {
       targetNode = values.findPrevNode(targetNode);
       palindromeNode = palindromeNode.Next;
     }
   }
-  return isPalindrome;
+  return isPalindromeString;
 }
 
 const Palindrom: FunctionComponent = () => {
   const [value, setValue] = useState<string>('');
-  const [result, setResult] = useState<false | undefined>();
+  const [result, setResult] = useState<boolean | undefined>();
 
-  const handleValueChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { value: inputValue } = e.target;
-    
-    setValue(() => inputValue);
+  const handleValueChange = (v: string) => {
+    setValue(v);
   };
 
-  const getResult = (value: string) => {
-    const list = initLinkList(value);
-    return isPalindrome(list);
-  }
+  useEffect(() => {
+    if (value) {
+      const list = initLinkList(value);
+      const isPalindromeString = isPalindrome(list);
+      setResult(isPalindromeString);
+    }
+  }, [value]);
+
   return (
     <div>
-      <Input value={value} onChange={handleValueChange} />
-      <div className="result" />
+      <Input
+        value={value}
+        onChange={(e: ChangeEvent<HTMLInputElement>) => handleValueChange(e.target.value)}
+      />
+      <div className="result">
+        {result !== undefined && result ? `'${value}' is Palindrome string` : `${value} is not Palindrom string.`}
+      </div>
     </div>
   );
 };
