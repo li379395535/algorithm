@@ -1,15 +1,7 @@
+import defaultComparator from '../model';
+
 /* eslint-disable no-param-reassign */
-interface IInsertSort<T> {
-  sort(array: T[]): T[],
-}
-
-type Comparator<T> = (a: T, b: T) => boolean;
-
-function defaultComparator<T>(a: T, b: T): boolean {
-  return a > b;
-}
-
-class InsertSort<T> implements IInsertSort<T> {
+class InsertSort<T> implements ISort<T> {
   private comparator: Comparator<T>;
 
   constructor(comparator?: Comparator<T>) {

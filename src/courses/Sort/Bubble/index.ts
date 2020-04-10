@@ -1,18 +1,10 @@
+import defaultComparator from '../model';
+
 /* eslint-disable no-param-reassign */
-interface BubbleSort<T> {
-  sort(array: T[]): T[],
-}
+class BubbleSort<T> implements ISort<T> {
+  private comparator: Comparator<T>;
 
-type ComparatorType<T> = (a: T, b: T) => boolean;
-
-function defaultComparator<T>(a: T, b: T): boolean {
-  return a > b;
-}
-
-class BubbleSort<T> implements BubbleSort<T> {
-  private comparator: ComparatorType<T>;
-
-  constructor(comparator?: ComparatorType<T>) {
+  constructor(comparator?: Comparator<T>) {
     this.comparator = comparator || defaultComparator;
   }
 

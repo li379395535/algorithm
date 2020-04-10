@@ -39,7 +39,8 @@ module.exports = {
         "args": "after-used",
         "ignoreRestSibling": false,
       }
-    ]
+    ],
+    "no-plusplus": 'off',
   },
   settings: {
     'import/resolver': {
